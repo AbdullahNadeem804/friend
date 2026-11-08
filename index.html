@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forever Us | Abdullah & Kashaif</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Great+Vibes&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:#080512;
+ color:white;
+ font-family:Poppins,sans-serif;
+ overflow-x:hidden;
+}
+
+#stars{
+ position:fixed;inset:0;pointer-events:none;z-index:-1;
+ background:
+ radial-gradient(circle at 20% 20%,#47205e 0,transparent 35%),
+ radial-gradient(circle at 80% 80%,#35114c 0,transparent 35%),
+ #080512;
+}
+
+.star{
+ position:fixed;width:3px;height:3px;background:white;
+ border-radius:50%;animation:twinkle 2s infinite alternate;
+}
+@keyframes twinkle{to{opacity:.15;transform:scale(.5)}}
+
+header{
+ position:fixed;top:0;width:100%;padding:18px;
+ text-align:center;background:#10091ccc;z-index:10;
+ backdrop-filter:blur(12px);letter-spacing:3px;
+}
+
+.scene{
+ min-height:100vh;display:none;
+ align-items:center;justify-content:center;
+ flex-direction:column;text-align:center;
+ padding:100px 22px 50px;
+ animation:appear 1s ease;
+}
+.scene.active{display:flex}
+
+@keyframes appear{
+ from{opacity:0;transform:translateY(35px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+h1{
+ font-size:clamp(35px,7vw,75px);
+ font-weight:800;
+ background:linear-gradient(90deg,#ff8bc8,#fff,#d6a5ff);
+ -webkit-background-clip:text;color:transparent;
+}
+
+.script{
+ font-family:'Great Vibes',cursive;
+ font-size:clamp(40px,8vw,75px);
+ color:#ff9bcf;
+}
+
+p{
+ max-width:700px;line-height:2;
+ color:#e5d8ed;margin:20px auto;font-size:16px;
+}
+
+button{
+ border:1px solid #ff9bcf;background:#ff8bc8;
+ color:#210b25;padding:13px 27px;border-radius:30px;
+ font-size:15px;font-weight:bold;cursor:pointer;
+ margin:12px;transition:.3s;
+}
+button:hover{transform:scale(1.08);box-shadow:0 0 25px #ff8bc8}
+
+.card{
+ background:#ffffff12;border:1px solid #ffffff30;
+ padding:25px;border-radius:20px;max-width:650px;
+ margin:12px;backdrop-filter:blur(10px);
+ box-shadow:0 0 30px #ff8bc822;
+}
+
+.heart{
+ font-size:75px;animation:heartbeat 1.2s infinite;
+}
+@keyframes heartbeat{
+ 50%{transform:scale(1.2)}
+}
+
+.gift{
+ width:150px;height:120px;background:#e73583;
+ margin:35px auto;position:relative;border-radius:8px;
+ cursor:pointer;box-shadow:0 0 35px #ff5caa;
+ transition:.5s;
+}
+.gift:before{
+ content:"";position:absolute;width:25px;height:120px;
+ background:#ffd76a;left:62px;
+}
+.gift:after{
+ content:"";position:absolute;width:150px;height:25px;
+ background:#ffd76a;top:-20px;left:0;
+}
+.gift.open{transform:rotate(-12deg) scale(1.2)}
+
+footer{color:#a99bb5;padding:20px;text-align:center}
+</style>
+</head>
+
+<body>
+<div id="stars"></div>
+<header>✦ FOREVER US ✦</header>
+
+<section class="scene active">
+ <div class="heart">❤️</div>
+ <h1>A SPECIAL STORY</h1>
+ <p>Some friendships are not made by blood. They are made by memories, loyalty and love.</p>
+ <div class="script">For Kashaif</div>
+ <button onclick="next()">START OUR STORY →</button>
+</section>
+
+<section class="scene">
+ <div class="script">Abdullah & Kashaif</div>
+ <h1>ONE FRIENDSHIP</h1>
+ <p>Two names, one beautiful friendship. This little website is dedicated to my childhood friend Kashaif.</p>
+ <button onclick="next()">NEXT MEMORY →</button>
+</section>
+
+<section class="scene">
+ <h1>CHILDHOOD DAYS</h1>
+ <div class="heart">🫂</div>
+ <p>Yaad hai woh bachpan ke din? Na koi tension, na koi fikar. Bas hum dono, hamari shararatein aur woh hansi jo kabhi khatam nahi hoti thi.</p>
+ <button onclick="next()">REMEMBER MORE →</button>
+</section>
+
+<section class="scene">
+ <h1>GOLDEN MEMORIES</h1>
+ <div class="card">
+  <h2>✨ The Best Days</h2>
+  <p>Woh choti choti baatein, woh mazak, woh laraaiyan aur phir dobara ek ho jana. Har yaad mere liye special hai.</p>
+ </div>
+ <button onclick="next()">CONTINUE →</button>
+</section>
+
+<section class="scene">
+ <h1>ENDLESS LAUGHTER</h1>
+ <div class="heart">😂</div>
+ <p>Kuch dost aise hote hain jin ke saath normal din bhi special ban jata hai. Tu unhi mein se ek hai, mere bhai!</p>
+ <button onclick="next()">NEXT →</button>
+</section>
+
+<section class="scene">
+ <h1>MORE THAN A FRIEND</h1>
+ <div class="script">You are my brother</div>
+ <div class="card">
+  <p>Dosti sirf saath rehne ka naam nahi. Dosti ka matlab hai mushkil waqt mein ek doosre ka saath dena.</p>
+ </div>
+ <button onclick="next()">NEXT →</button>
+</section>
+
+<section class="scene">
+ <h1>ALWAYS TOGETHER</h1>
+ <div class="heart">🤝</div>
+ <p>Chahe zindagi humein kitna bhi door le jaye, meri dua hai hamari dosti hamesha aise hi rahe.</p>
+ <button onclick="next()">NEXT →</button>
+</section>
+
+<section class="scene">
+ <h1>MY PROMISE</h1>
+ <div class="card">
+  <p>Kashaif, main promise karta hoon ke teri dosti ki izzat hamesha karunga. Khushi ho ya mushkil, dosti ka rishta kabhi nahi bhoolunga.</p>
+ </div>
+ <button onclick="next()">READ MY MESSAGE →</button>
+</section>
+
+<section class="scene">
+ <div class="script">A message from Abdullah</div>
+ <h1>DEAR KASHAIF ❤️</h1>
+ <div class="card">
+  <p>Tu mera sirf dost nahi, mere bachpan ka ek khoobsurat hissa hai. Tere saath guzra hua har lamha mere liye qeemti hai. Allah kare hamari dosti hamesha salamat rahe.</p>
+ </div>
+ <button onclick="next()">OUR FUTURE →</button>
+</section>
+
+<section class="scene">
+ <h1>OUR FUTURE</h1>
+ <div class="heart">🌟</div>
+ <p>Abhi toh bohat si yaadein banana baqi hain. Bohat se safar, bohat si hansi aur bohat si kahaniyan hamara intezar kar rahi hain.</p>
+ <button onclick="next()">ONE LAST SURPRISE →</button>
+</section>
+
+<section class="scene">
+ <h1>A LITTLE SURPRISE</h1>
+ <p>Kashaif! Tumhare liye Abdullah ki taraf se ek special gift 🎁</p>
+ <div class="gift" onclick="openGift()" id="gift"></div>
+ <p id="giftMessage">CLICK THE GIFT BOX ❤️</p>
+ <button onclick="next()">FINAL MESSAGE →</button>
+</section>
+
+<section class="scene">
+ <div class="heart">❤️</div>
+ <div class="script">Forever & Always</div>
+ <h1>ABDULLAH × KASHAIF</h1>
+ <p>Childhood friends. Brothers forever. No matter what happens, this friendship will always have a special place in my heart.</p>
+ <h2 style="color:#ff9bcf;margin:20px">DOSTI ZINDABAD! 🫂</h2>
+ <button onclick="location.reload()">WATCH AGAIN ↻</button>
+</section>
+
+<footer>Made with ❤️ by Abdullah for Kashaif</footer>
+
+<script>
+let current=0;
+const scenes=document.querySelectorAll('.scene');
+
+function next(){
+ scenes[current].classList.remove('active');
+ current=(current+1)%scenes.length;
+ scenes[current].classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function openGift(){
+ document.getElementById('gift').classList.add('open');
+ document.getElementById('giftMessage').innerHTML=
+ "🎉 SURPRISE! KASHAIF, TU MERA BHAI HAI! ❤️<br>Thank you for being my childhood friend. FOREVER US!";
+ for(let i=0;i<45;i++){
+  let c=document.createElement('div');
+  c.innerHTML=['❤️','✨','💖','🎉'][Math.floor(Math.random()*4)];
+  c.style.cssText=`position:fixed;left:${Math.random()*100}%;top:${Math.random()*100}%;font-size:25px;pointer-events:none;z-index:100;animation:appear 2s`;
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),2500);
+ }
+}
+
+// Star background
+for(let i=0;i<90;i++){
+ let s=document.createElement('div');
+ s.className='star';
+ s.style.left=Math.random()*100+'%';
+ s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*3+'s';
+ document.body.appendChild(s);
+}
+</script>
+</body>
+</html>
